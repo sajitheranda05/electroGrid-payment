@@ -11,9 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class ProjectAPI
- */
+
 @WebServlet("/paymentAPI")
 public class PaymentAPI extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -42,9 +40,7 @@ public class PaymentAPI extends HttpServlet {
 
 	}
 
-	/**
-	 * @see HttpServlet#doPut(HttpServletRequest, HttpServletResponse)
-	 */
+
 	protected void doPut(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Map paras = getParasMap(request);
@@ -70,7 +66,7 @@ public class PaymentAPI extends HttpServlet {
 		response.getWriter().write(output);
 	}
 
-	// Convert request parameters to a Map
+
 	private static Map getParasMap(HttpServletRequest request) {
 		Map<String, String> map = new HashMap<String, String>();
 		try {
